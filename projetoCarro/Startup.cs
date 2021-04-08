@@ -7,6 +7,12 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using projetoCarro.Context;
 using projetoCarro.Services;
+using projetoCarro.UserCase;
+using projetoCarro.UseCase;
+using projetoCarro.Borders.Interfaces;
+using projetoCarro.Repositories;
+using projetoCarro.Adapter;
+using projetoCarro.Borders.Adapter;
 
 namespace projetoCarro
 {
@@ -26,6 +32,16 @@ namespace projetoCarro
             opt.UseNpgsql(Configuration.GetConnectionString("urlCarro")));
 
             services.AddScoped<ICarService, CarService>();
+
+            services.AddScoped<IDeleteCarsUseCase, DeleteCarsUseCase>();
+            services.AddScoped<IAddCarsUseCase, AddCarsUseCase>();
+            services.AddScoped<IReturnCarsIdUseCase, ReturnCarsIdUseCase>();
+            services.AddScoped<IReturnListCarsUseCase, ReturnListCarsUseCase>();
+            services.AddScoped<IUpdateCarsUseCase, UpdateCarsUseCase>();
+
+            services.AddScoped<IRepositoriesCars, RepositoriesCars>();
+
+            services.AddScoped<IAddCarsAdapter, AddCarsAdapter>();
 
 
             services.AddControllers();

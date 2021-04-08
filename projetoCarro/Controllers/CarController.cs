@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using projetoCarro.DTO.AddCars;
 using projetoCarro.Models;
 using projetoCarro.Services;
+using projetoCarro.UserCase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +17,13 @@ namespace projetoCarro.Controllers
     {
         private readonly ILogger<CarController> _logger;
         private readonly ICarService _cars;
+        private readonly IAddCarsUseCase _addCarsUseCase;
 
-        public CarController(ILogger<CarController> logger, ICarService cars)
+        public CarController(ILogger<CarController> logger, ICarService cars, IAddCarsUseCase addCarsUseCase)
         {
             _logger = logger;
             _cars = cars;
+            _addCarsUseCase = addCarsUseCase;
         }
 
         [HttpGet]
@@ -35,9 +39,9 @@ namespace projetoCarro.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddGetCars([FromBody] Cars cars)
+        public IActionResult AddGetCars([FromBody] AddCarsRequest cars)
         {
-            return Ok(_cars.AddCars(cars));
+            return Ok(_addCarsUseCase.Execute(cars));
         }
 
         [HttpPut]
