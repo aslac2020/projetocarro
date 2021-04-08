@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace projetoCarro.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[Controller]")]
     public class CarController : ControllerBase
     {
         private readonly ILogger<CarController> _logger;

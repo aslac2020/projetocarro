@@ -48,6 +48,7 @@ namespace projetoCarro.Services
         {
             _carDbContext.cars.Attach(cars);
             _carDbContext.Entry(cars).State = EntityState.Modified;
+            _carDbContext.SaveChanges();
             return true;
         }
     }
