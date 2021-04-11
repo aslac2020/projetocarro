@@ -26,7 +26,7 @@ namespace projetoCarro.UserCase
 
             try
             {
-                if (request.Model.Length < 1)
+                if (request.Model.Length < 3)
                 {
                     response.msg = "Erro ao adicionar o carro";
                     return response;
