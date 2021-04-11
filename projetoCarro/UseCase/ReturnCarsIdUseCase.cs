@@ -19,10 +19,11 @@ namespace projetoCarro.UseCase
         public ReturnCarIdResponse Execute(ReturnCarIdRequest request)
         {
             var response = new ReturnCarIdResponse();
-            var getById = _repositoriesCars.GetById(request.id);
-
+          
             try
             {
+                var getById = _repositoriesCars.GetById(request.id);
+
                 if (request.id <= 0 || getById == null)
                 {
                     response.msg = "Id não encontrado :(";
@@ -30,16 +31,17 @@ namespace projetoCarro.UseCase
                 }
 
                 response.cars = _repositoriesCars.GetById(request.id);
-                response.msg = "Carro encontrado com Sucesso ";
+                response.msg = "Carro encontrado com Sucesso";
                 return response;
 
             }
             catch (Exception)
             {
 
-                response.msg = "Falha ao procurar o carro :( ";
+                response.msg = "Falha ao procurar o carro :(";
                 return response;
             }
         }
+
     }
 }

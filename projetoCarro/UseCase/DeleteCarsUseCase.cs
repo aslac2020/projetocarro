@@ -22,10 +22,11 @@ namespace projetoCarro.UseCase
         public DeleteCarsResponse Execute(DeleteCarsRequest request)
         {
             var response = new DeleteCarsResponse();
-            var getById = _repositoriesCars.GetById(request.id);
 
             try
             {
+                var getById = _repositoriesCars.GetById(request.id);
+
                 if (request.id <= 0 || getById == null)
                 {
                     response.msg = "Não encontrado o id :( ";

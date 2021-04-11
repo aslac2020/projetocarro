@@ -16,11 +16,12 @@ namespace projetoCarro.UseCase
         public ReturnListCarsResponse Execute()
         {
             var response = new ReturnListCarsResponse();
-            var getList = _repositoriesCars.GetListCars();
-
+ 
             try
             {
-                if (getList == null)
+                var getList = _repositoriesCars.GetListCars();
+
+                if (getList.Count <= 0)
                 {
                     response.msg = "Nenhuma lista para ser mostrada :(";
                     return response;

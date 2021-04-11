@@ -21,10 +21,11 @@ namespace projetoCarro.UseCase
         public UpdateCarsResponse Execute(UpdateCarsRequest request, int id)
         {
             var response = new UpdateCarsResponse();
-            var getById = _repositoriesCars.GetById(id);
 
             try
             {
+                var getById = _repositoriesCars.GetById(id);
+
                 if (id <= 0 || getById == null )
                 {
                     response.msg = "Erro ao atualizar o carro";
