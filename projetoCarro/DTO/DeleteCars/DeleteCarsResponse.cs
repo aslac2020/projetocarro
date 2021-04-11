@@ -7,5 +7,6 @@ namespace projetoCarro.DTO.DeleteCars
 {
     public class DeleteCarsResponse
     {
+        public string msg { get; set; }
     }
 }

@@ -7,5 +7,11 @@ namespace projetoCarro.DTO.UpdateCars
 {
     public class UpdateCarsRequest
     {
+        public string Model { get; set; }
+        public string Cor { get; set; }
+        public int Year { get; set; }
+        public string Brands { get; set; }
+        public int NumberDoors { get; set; }
+        public string TypeRate { get; set; }
     }
 }

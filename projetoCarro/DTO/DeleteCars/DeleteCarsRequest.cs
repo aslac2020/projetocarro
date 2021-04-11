@@ -7,5 +7,7 @@ namespace projetoCarro.DTO.DeleteCars
 {
     public class DeleteCarsRequest
     {
+        public int id { get; set; }
+        
     }
 }

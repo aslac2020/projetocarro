@@ -1,16 +1,42 @@
-﻿using projetoCarro.DTO.ReturnListCars;
+﻿using projetoCarro.Borders.Interfaces;
+using projetoCarro.DTO.ReturnListCars;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace projetoCarro.UseCase
 {
     public class ReturnListCarsUseCase : IReturnListCarsUseCase
     {
-        public ReturnListCarsResponse Execute(ReturnListCarsRequest request)
+        private readonly IRepositoriesCars _repositoriesCars;
+
+        public ReturnListCarsUseCase(IRepositoriesCars repositoriesCars)
         {
-            throw new NotImplementedException();
+            _repositoriesCars = repositoriesCars;
+        }
+
+        public ReturnListCarsResponse Execute()
+        {
+            var response = new ReturnListCarsResponse();
+            var getList = _repositoriesCars.GetListCars();
+
+            try
+            {
+                if (getList == null)
+                {
+                    response.msg = "Nenhuma lista para ser mostrada :(";
+                    return response;
+                }
+
+                response.cars =  _repositoriesCars.GetListCars();
+                response.msg = "Lista de Carro encontrado com Sucesso";
+                return response;
+
+            }
+            catch (Exception)
+            {
+
+                response.msg = "Problema ao carregar a lista :(";
+                return response;
+            }
         }
     }
 }

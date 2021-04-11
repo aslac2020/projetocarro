@@ -7,5 +7,6 @@ namespace projetoCarro.DTO.ReturnCarById
 {
     public class ReturnCarIdRequest
     {
+        public int id { get; set; }
     }
 }

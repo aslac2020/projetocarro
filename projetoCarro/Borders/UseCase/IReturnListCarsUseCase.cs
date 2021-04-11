@@ -8,6 +8,6 @@ namespace projetoCarro.UseCase
 {
     public interface IReturnListCarsUseCase
     {
-        ReturnListCarsResponse Execute(ReturnListCarsRequest request);
+        ReturnListCarsResponse Execute();
     }
 }

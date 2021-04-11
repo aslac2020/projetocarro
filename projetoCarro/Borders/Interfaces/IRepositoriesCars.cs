@@ -9,7 +9,10 @@ namespace projetoCarro.Borders.Interfaces
 {
     public interface IRepositoriesCars
     {
-        //public void Add(Cars cars);
         public int Add(Cars cars);
+        public bool Update(Cars cars);
+        public void Remove(int id);
+        public Cars GetById(int id);
+        public List<Cars> GetListCars();
     }
 }

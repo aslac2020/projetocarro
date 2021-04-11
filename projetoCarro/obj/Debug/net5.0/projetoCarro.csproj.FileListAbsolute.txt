@@ -62,6 +62,7 @@ E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.MvcApplicationPartsAssemblyInfo.cs
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.MvcApplicationPartsAssemblyInfo.cache
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\staticwebassets\projetoCarro.StaticWebAssets.Manifest.cache
+E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\staticwebassets\projetoCarro.StaticWebAssets.xml
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\scopedcss\bundle\projetoCarro.styles.css
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.RazorTargetAssemblyInfo.cache
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.csproj.CopyComplete
@@ -69,4 +70,3 @@ E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\ref\projetoCarro.dll
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.pdb
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.genruntimeconfig.cache
-E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\staticwebassets\projetoCarro.StaticWebAssets.xml

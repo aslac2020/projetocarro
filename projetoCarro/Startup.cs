@@ -1,18 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Microsoft.EntityFrameworkCore;
-using projetoCarro.Context;
-using projetoCarro.Services;
-using projetoCarro.UserCase;
-using projetoCarro.UseCase;
-using projetoCarro.Borders.Interfaces;
-using projetoCarro.Repositories;
 using projetoCarro.Adapter;
 using projetoCarro.Borders.Adapter;
+using projetoCarro.Borders.Interfaces;
+using projetoCarro.Context;
+using projetoCarro.Repositories;
+using projetoCarro.UseCase;
+using projetoCarro.UserCase;
 
 namespace projetoCarro
 {
@@ -31,7 +30,6 @@ namespace projetoCarro
             services.AddEntityFrameworkNpgsql().AddDbContext<CarDbContext>(opt =>
             opt.UseNpgsql(Configuration.GetConnectionString("urlCarro")));
 
-            services.AddScoped<ICarService, CarService>();
 
             services.AddScoped<IDeleteCarsUseCase, DeleteCarsUseCase>();
             services.AddScoped<IAddCarsUseCase, AddCarsUseCase>();
@@ -42,6 +40,7 @@ namespace projetoCarro
             services.AddScoped<IRepositoriesCars, RepositoriesCars>();
 
             services.AddScoped<IAddCarsAdapter, AddCarsAdapter>();
+            services.AddScoped<IUpdateCarsAdapter, UpdateCarsAdapter>();
 
 
             services.AddControllers();

@@ -9,7 +9,7 @@ namespace projetoCarro.Models
     public class Cars
     {
         [Key]
-        public int _id { get; set; }
+        public int id { get; set; }
         public string Model { get; set; }
         public string Cor { get; set; }
         public int Year { get; set; }

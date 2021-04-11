@@ -8,6 +8,6 @@ namespace projetoCarro.UseCase
 {
     public interface IUpdateCarsUseCase
     {
-        UpdateCarsResponse Execute(UpdateCarsRequest request);
+        UpdateCarsResponse Execute(UpdateCarsRequest request, int id);
     }
 }
