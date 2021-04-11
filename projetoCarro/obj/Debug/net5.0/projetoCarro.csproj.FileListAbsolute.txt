@@ -54,7 +54,6 @@ E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\bin\Debug\net5.0\Npgsql.Entity
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.csprojAssemblyReference.cache
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.GeneratedMSBuildEditorConfig.editorconfig
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.AssemblyInfoInputs.cache
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.AssemblyInfo.cs
@@ -70,3 +69,4 @@ E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\ref\projetoCarro.dll
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.pdb
 E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.genruntimeconfig.cache
+E:\Squadra\Dotnet\aula2\projetoCarro\projetoCarro\obj\Debug\net5.0\projetoCarro.csprojAssemblyReference.cache
