@@ -60,13 +60,7 @@ namespace projetocarro_teste.UseCase
             //Criar as variaveis
             var request = new AddCarsRequestBuilder().withModelLength(2).Build();
             var response = new AddCarsResponse();
-            //var cars = new Cars();
-            //cars.id = 1;
             response.msg = "Erro ao adicionar o carro";
-
-            //_repositoriescars.Setup(repositorio => repositorio.Add(cars)).Returns(cars.id);
-            //__addcarsadapter.Setup(adapter => adapter.converterRequestCars(request)).Returns(cars);
-
             //Act
             //Chamar acçoes
 
