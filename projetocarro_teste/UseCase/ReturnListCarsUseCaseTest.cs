@@ -26,8 +26,7 @@ namespace projetocarro_teste.UseCase
         [Fact]
         public void Cars_ReturnListCars_WhenReturn_Sucess()
         {
-            //Arrange
-            //Criar as variaveis
+
             var request = new ReturnListCarsRequestBuilder().Build();
             var response = new ReturnListCarsResponse();
             var cars = new List<Cars>();
@@ -48,9 +47,6 @@ namespace projetocarro_teste.UseCase
 
             _repositoriescars.Setup(repositorio => repositorio.GetListCars()).Returns(cars);
 
-            //Act
-            //Chamar acçoes
-
             var result = _returnListCars.Execute();
 
         }
@@ -58,17 +54,12 @@ namespace projetocarro_teste.UseCase
         [Fact]
         public void Cars_ReturnListCars_WhenReturn_Failed()
         {
-            //Arrange
-            //Criar as variaveis
             var request = new ReturnListCarsRequestBuilder().Build();
             var response = new ReturnListCarsResponse();
             response.msg = "Nenhuma lista para ser mostrada :(";
             var cars = new List<Cars>();
 
             _repositoriescars.Setup(repositorio => repositorio.GetListCars()).Returns(cars);
-
-            //Act
-            //Chamar acçoes
 
             var result = _returnListCars.Execute();
 
@@ -77,17 +68,13 @@ namespace projetocarro_teste.UseCase
         [Fact]
         public void Cars_ReturnListCars_WhenReturn_Exception()
         {
-            //Arrange
-            //Criar as variaveis
+
             var request = new ReturnListCarsRequestBuilder().Build();
             var response = new ReturnListCarsResponse();
             response.msg = "Problema ao carregar a lista :(";
             var cars = new List<Cars>();
 
             _repositoriescars.Setup(repositorio => repositorio.GetListCars()).Throws(new Exception());
-
-            //Act
-            //Chamar acçoes
 
             var result = _returnListCars.Execute();
 

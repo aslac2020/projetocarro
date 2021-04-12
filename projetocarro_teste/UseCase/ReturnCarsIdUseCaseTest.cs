@@ -24,8 +24,7 @@ namespace projetocarro_teste.UseCase
         [Fact]
         public void Cars_ReturnCarsId_WhenReturn_Sucess()
         {
-            //Arrange
-            //Criar as variaveis
+           
             var number = 1;
             var request = new ReturnCarsIdRequestBuilder(number).Build();
             var response = new ReturnCarIdResponse();
@@ -34,43 +33,33 @@ namespace projetocarro_teste.UseCase
 
             _repositoriescars.Setup(repositorio => repositorio.GetById(request.id)).Returns(cars);
 
-            //Act
-            //Chamar acçoes
 
             var result = _returnCarsIdUse.Execute(request);
-
 
         }
 
         [Fact]
         public void Cars_ReturnCarsId_WhenReturn_Failed()
         {
-            //Arrange
-            //Criar as variaveis
+
             var number = 0;
             var request = new ReturnCarsIdRequestBuilder(number).Build();
             var response = new ReturnCarIdResponse();
             response.msg = "Id não encontrado :(";
-            //Act
-            //Chamar ações
 
             var result = _returnCarsIdUse.Execute(request);
 
             response.Should().BeEquivalentTo(result);
-
         }
 
         [Fact]
         public void Cars_ReturnCarsId_WhenReturn_Exception()
         {
-            //Arrange
-            //Criar as variaveis
             var number = 0;
             var request = new ReturnCarsIdRequestBuilder(number).Build();
             var response = new ReturnCarIdResponse();
             response.msg = "Falha ao procurar o carro :(";
-            //Act
-            //Chamar ações
+
             _repositoriescars.Setup(repositorio => repositorio.GetById(request.id)).Throws(new Exception());
 
             var result = _returnCarsIdUse.Execute(request);

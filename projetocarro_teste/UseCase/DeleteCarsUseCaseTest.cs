@@ -31,8 +31,7 @@ namespace projetocarro_teste.UseCase
         [Fact]
         public void Cars_DeleteCars_WhenReturn_Sucess()
         {
-            //Arrange
-            //Criar as variaveis
+        
             var number = 1;
             var request = new DeleteCarsRequestBuilder(number).Build();
             var response = new DeleteCarsResponse();
@@ -41,13 +40,8 @@ namespace projetocarro_teste.UseCase
 
             _repositoriescars.Setup(repositorio => repositorio.GetById(request.id)).Returns(cars);
 
-            //Act
-            //Chamar acçoes
-
             var result = _usercase.Execute(request);
 
-            //Asserts
-            //As regras dos testes que vamos utilizar
             response.Should().BeEquivalentTo(result);
 
         }
@@ -55,40 +49,30 @@ namespace projetocarro_teste.UseCase
         [Fact]
         public void Cars_DeleteCars_WhenReturn_Failed()
         {
-            //Arrange
-            //Criar as variaveis
+
             var number = 0;
             var request = new DeleteCarsRequestBuilder(number).Build();
             var response = new DeleteCarsResponse();
             response.msg = "Não encontrado o id :( ";
-            //Act
-            //Chamar acçoes
-
+      
             var result = _usercase.Execute(request);
 
-            //Asserts
-            //As regras dos testes que vamos utilizar
             response.Should().BeEquivalentTo(result);
         }
 
         [Fact]
         public void Cars_DeleteCars_WhenReturn_Exception()
         {
-            //Arrange
-            //Criar as variaveis
+
             var number = 0;
             var request = new DeleteCarsRequestBuilder(number).Build();
             var response = new DeleteCarsResponse();
             response.msg = "Falha ao deletar o carro :(";
-            //Act
-            //Chamar acçoes
-
+  
             _repositoriescars.Setup(repositorio => repositorio.GetById(request.id)).Throws(new Exception());
 
             var result = _usercase.Execute(request);
 
-            //Asserts
-            //As regras dos testes que vamos utilizar
             response.Should().BeEquivalentTo(result);
         }
 
